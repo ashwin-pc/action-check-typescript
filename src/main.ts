@@ -59,7 +59,7 @@ async function run(): Promise<void> {
 
     let installScript = `npm install --production=false`
     if (yarnLock) {
-      installScript = `yarn --frozen-lockfile`
+      installScript = `yarn osd bootstrap`
     } else if (packageLock) {
       installScript = `npm ci`
     }
